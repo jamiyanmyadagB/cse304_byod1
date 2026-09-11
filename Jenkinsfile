@@ -9,12 +9,10 @@ pipeline {
 
     stages {
         stage('Checkout') {
-    steps {
-        git branch: 'main',
-            url: 'https://github.com/jamiyanmyadagB/cse304_byod1.git',
-            credentialsId: 'github-creds'
-    }
-}
+            steps {
+                git branch: 'main', url: 'https://github.com/jamiyanmyadagB/cse304_byod1.git', credentialsId: 'github-creds'
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
